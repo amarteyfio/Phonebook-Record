@@ -5,5 +5,5 @@ require "../controllers/general_controller.php";
 $data = sel_all_ctr("phonebook");
 
 //
-echo json_encode($data);
+return json_encode($data);
 ?>
