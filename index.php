@@ -1,5 +1,6 @@
 <?php
 	// landing/index page
+	header("Location: view/form.php");
 ?>
 
 <!DOCTYPE html>
