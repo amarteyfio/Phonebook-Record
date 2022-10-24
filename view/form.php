@@ -30,9 +30,6 @@
     <div id = "div2" style="float: left;padding:1rem">
     <table id = "records">
         <thead>
-        <tr>
-            <th colspan="2">Phonebook Records</th>
-        </tr>
         </thead>
         <tbody>
         <tr>
