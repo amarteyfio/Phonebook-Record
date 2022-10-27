@@ -71,7 +71,7 @@
                     url: "../actions/submit.php",
                     data: "name=" + name+ "&phone=" + phone,
                     success: function(data) {
-                       alert("sucess");
+                       alert("success");
                     }
                 });
 
