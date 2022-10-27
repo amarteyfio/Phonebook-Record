@@ -63,7 +63,7 @@
     </div>
 <script>
   $("#add_rec").submit(function() {
-                var name= $("#fame").val();
+                var name= $("#fname").val();
                 var phone= $("#pnumber").val();
 
                 $.ajax({
