@@ -23,7 +23,7 @@
         <input type = "text" name = "pnumber" id = "pnumber" placeholder="Enter your phone number" required>
         <br>
         <br>
-        <input type = "Submit" name = "submit" id = "sub" value="Submit">
+        <button type="submit">Sign Up</button>
     </form>
     </div>
     <br>
