@@ -8,7 +8,7 @@
     <style>th, td {border: 1px solid black;font: 1em sans-serif;padding: 1rem;}</style>
     <style> form {padding:0.5rem;font: 1em sans-serif;}</style>
     <style> input {padding: 0.5rem; font: 1em sans-serif;}</style>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <title>Form</title>
@@ -16,7 +16,7 @@
 <body>
     <div id = 'div1' style="float: left;padding: 1rem;">
     <h1 style="padding:0.5rem;font: 1.5rem sans-serif;">Add New Record</h1>
-    <form action = "../actions/submit.php" method="POST">
+    <form  method="POST" id = "add_rec">
         <input type = "text" name = "fname" id = "fname" placeholder="Enter your full name...."  required>
         <br>
         <br>
@@ -61,5 +61,22 @@
 
 
     </div>
+<script>
+  $("#add_rec").submit(function() {
+                var name= $("#fame").val();
+                var phone= $("#pnumber").val();
+
+                $.ajax({
+                    type: "POST",
+                    url: "../actions/submit.php",
+                    data: "name=" + name+ "&phone=" + phone,
+                    success: function(data) {
+                       alert("sucess");
+                    }
+                });
+
+
+            });
+</script>
 </body>
 </html>
