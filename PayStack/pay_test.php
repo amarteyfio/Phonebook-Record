@@ -39,18 +39,21 @@ function payWithPaystack(e) {
     callback: function(response){
       let message = 'Payment complete! Reference: ' + response.reference;
       alert(message);
-    }
-  });
-
-  handler.openIframe();
-}
-
-$.ajax({
-    url: 'https://phonebook-lab.herokuapp.com/PayStack/verify.php'+ response.reference,
+    },
+    callback: function(response){
+  $.ajax({
+    url: 'http://www.phonebook-records.herokuapp.com/PayStack/verify.php'+ response.reference,
     method: 'get',
     success: function (response) {
       // the transaction status is in response.data.status
     }
   });
+}
+});
+
+  handler.openIframe();
+}
+
+
 </script>
 </html>
