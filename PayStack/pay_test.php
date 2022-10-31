@@ -46,7 +46,7 @@ function payWithPaystack(e) {
 }
 
 $.ajax({
-    url: 'https://phonebook-lab.herokuapp.com/PayStack/pay_test.php'+ response.reference,
+    url: 'https://phonebook-lab.herokuapp.com/PayStack/verify.php'+ response.reference,
     method: 'get',
     success: function (response) {
       // the transaction status is in response.data.status
