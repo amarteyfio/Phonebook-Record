@@ -44,5 +44,6 @@ function payWithPaystack(e) {
 
   handler.openIframe();
 }
+
 </script>
 </html>
